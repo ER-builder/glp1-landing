@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSupabaseAdmin } from "@/lib/supabase-server";
+import { getDb } from "@/lib/db";
 import { eventsSchema } from "@/lib/schemas";
 
 export async function POST(request: Request) {
@@ -15,29 +15,22 @@ export async function POST(request: Request) {
     }
 
     const { events } = result.data;
+    const sql = getDb();
 
-    const { error } = await getSupabaseAdmin().from("events").insert(
-      events.map((event) => ({
-        session_id: event.session_id,
-        variant: event.variant,
-        event_type: event.event_type,
-        event_data: event.event_data || {},
-      }))
-    );
-
-    if (error) {
-      console.error("Events insert error:", error);
-      return NextResponse.json(
-        { error: "Failed to record events" },
-        { status: 500 }
-      );
+    // Insert all events in a single query
+    for (const event of events) {
+      await sql`
+        INSERT INTO events (session_id, variant, event_type, event_data)
+        VALUES (${event.session_id}, ${event.variant}, ${event.event_type}, ${JSON.stringify(event.event_data || {})})
+      `;
     }
 
     return NextResponse.json({ ok: true }, { status: 200 });
-  } catch {
+  } catch (err) {
+    console.error("Events insert error:", err);
     return NextResponse.json(
-      { error: "Invalid request" },
-      { status: 400 }
+      { error: "Failed to record events" },
+      { status: 500 }
     );
   }
 }
