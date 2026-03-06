@@ -17,17 +17,9 @@
   --font-mono: var(--font-jetbrains-mono);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: var(--color-abyss);
   color: var(--color-text);
-  font-family: var(--font-sans), -apple-system, sans-serif;
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 

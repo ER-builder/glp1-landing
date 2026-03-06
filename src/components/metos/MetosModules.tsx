@@ -7,22 +7,22 @@ const modules = [
   {
     module: "module::energy_core",
     title: "Sustained Output",
-    desc: "B-complex + CoQ10 engine. Eliminates the energy drain GLP-1 users accept as normal.",
+    desc: "B-complex + CoQ10 engine. Formulated to support sustained energy during GLP-1 therapy.",
   },
   {
     module: "module::metabolic_primer",
     title: "Rate Lock",
-    desc: "Thermogenic calibration. Keeps your metabolic rate from downshifting during weight loss.",
+    desc: "Thermogenic calibration. Formulated to support healthy metabolic rate during weight loss.",
   },
   {
     module: "module::gut_restore",
     title: "Biome Repair",
-    desc: "Microbiome repair protocol. Rebuilds what GLP-1 disrupts.",
+    desc: "Microbiome support protocol. Formulated to support digestive health during GLP-1 therapy.",
   },
   {
     module: "module::electrolyte_matrix",
     title: "Mineral Balance",
-    desc: "Precision mineral replacement. Na/K/Mg in the ratios your body actually depletes.",
+    desc: "Precision mineral replacement. Na/K/Mg in ratios designed to support mineral balance.",
   },
   {
     module: "module::recovery_ops",

@@ -16,10 +16,10 @@ export function MetosHero() {
         </div>
 
         <h1 className="text-[42px] md:text-[76px] font-extrabold tracking-[-2px] md:tracking-[-3.5px] leading-[1.05] max-w-[900px] mx-auto">
-          The stack that makes
+          Your GLP-1 stack,
           <br />
           <span className="bg-gradient-to-br from-teal to-sage bg-clip-text text-transparent">
-            the drug work harder.
+            upgraded.
           </span>
         </h1>
 

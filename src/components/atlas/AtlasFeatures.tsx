@@ -7,22 +7,22 @@ const features = [
   {
     icon: "\u26A1",
     title: "Energy Core",
-    desc: "B-vitamin + CoQ10 stack that fights GLP-1 fatigue. No crash. No jitters.",
+    desc: "B-vitamin + CoQ10 stack designed to support energy levels during GLP-1 therapy. No crash. No jitters.",
   },
   {
     icon: "\u{1F525}",
     title: "Metabolic Primer",
-    desc: "Phase-specific nutrients that help your metabolism run hotter, not slower.",
+    desc: "Phase-specific nutrients formulated to support healthy metabolic rate during weight loss.",
   },
   {
     icon: "\u{1F9EC}",
     title: "Gut Restore",
-    desc: "Pre and probiotics calibrated for GLP-1 side effects. Your gut, rebuilt.",
+    desc: "Pre and probiotics formulated to support digestive comfort during GLP-1 therapy.",
   },
   {
     icon: "\u{1F4A7}",
     title: "Electrolyte Matrix",
-    desc: "Sodium, potassium, magnesium in the exact ratios GLP-1 users deplete.",
+    desc: "Sodium, potassium, magnesium in ratios designed to support mineral balance.",
   },
   {
     icon: "\u{1F504}",

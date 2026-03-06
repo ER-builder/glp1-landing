@@ -9,8 +9,7 @@ export function MetosFooter() {
             met<span className="text-teal">OS</span>
           </h3>
           <p className="text-sm text-text-dim leading-relaxed max-w-[280px]">
-            The metabolic operating system for men on GLP-1. Engineered to
-            protect what the drug doesn&apos;t.
+            The metabolic support system for men on GLP-1.
           </p>
         </div>
 
