@@ -1,8 +1,17 @@
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
 import { waitlistSchema } from "@/lib/schemas";
+import { isRateLimited } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const body = await request.json();
     const result = waitlistSchema.safeParse(body);
