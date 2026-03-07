@@ -56,3 +56,52 @@ Push to `main` → Vercel auto-deploys → `stack.erapps.xyz`
 - `@theme inline` in globals.css defines custom colors (abyss, navy, sage, teal, etc.)
 - Fonts self-hosted via `next/font/google` (Outfit + JetBrains Mono)
 - Migration SQL file path says "supabase" but project uses Neon — just the directory name
+
+## Analyzing Results
+
+When you have enough traffic (200+ page views per variant), determine the winner:
+
+```sql
+-- Conversion rate per variant
+SELECT
+  e.variant,
+  COUNT(*) FILTER (WHERE e.event_type = 'page_view') AS views,
+  (SELECT COUNT(*) FROM waitlist w WHERE w.variant = e.variant) AS signups,
+  ROUND(
+    (SELECT COUNT(*) FROM waitlist w WHERE w.variant = e.variant)::numeric
+    / NULLIF(COUNT(*) FILTER (WHERE e.event_type = 'page_view'), 0) * 100, 2
+  ) AS conversion_pct
+FROM events e
+GROUP BY e.variant;
+```
+
+```sql
+-- Scroll depth comparison (engagement quality)
+SELECT variant, event_type, COUNT(*) AS count
+FROM events
+WHERE event_type LIKE 'scroll_%'
+GROUP BY variant, event_type
+ORDER BY variant, event_type;
+```
+
+```sql
+-- Average time on page per variant
+SELECT variant,
+  ROUND(AVG((event_data->>'seconds')::numeric)) AS avg_seconds
+FROM events
+WHERE event_type = 'time_on_page'
+GROUP BY variant;
+```
+
+Plug the views + signups into an online A/B significance calculator (e.g. abtestguide.com/calc/) — need 95% confidence before calling a winner.
+
+## Roadmap
+
+- [ ] **Call the A/B winner** — once statistically significant, drop the losing variant and go all-in on the winner's brand name
+- [ ] **Buy domain** — grab the winner-specific domain (see domain list in original plan)
+- [ ] **Add significance dashboard** — simple `/admin` page showing conversion rates + significance (or just use the SQL queries above)
+- [ ] **UTM tracking validation** — run a test ad with UTM params, verify source/medium/campaign appear in waitlist table
+- [ ] **Email confirmation flow** — double opt-in for waitlist (anti-spam, higher quality list)
+- [ ] **Privacy policy + Terms pages** — currently placeholder links in footer, need real content before running paid ads
+- [ ] **Mobile polish pass** — Lighthouse audit, test on real devices
+- [ ] **Ad creative** — design Meta/Google ad creatives matching each variant's visual language
