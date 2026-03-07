@@ -1,7 +1,7 @@
 export function MetosStats() {
   const stats = [
     { value: "6", desc: "System Modules" },
-    { value: "100%", desc: "Science-Backed" },
+    { value: "AI", desc: "Personalized" },
     { value: "GLP-1", desc: "Optimized For" },
     { value: "Men", desc: "Engineered For" },
   ];

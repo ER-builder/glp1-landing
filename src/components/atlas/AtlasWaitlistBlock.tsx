@@ -22,10 +22,10 @@ export function AtlasWaitlistBlock() {
           </p>
         </div>
         <div className="bg-navy border border-white/[0.06] rounded-2xl p-8 text-center">
-          <div className="text-3xl mb-4">&#x1F4B0;</div>
-          <h3 className="text-lg font-semibold mb-2">Launch Pricing</h3>
+          <div className="text-3xl mb-4">&#x1F916;</div>
+          <h3 className="text-lg font-semibold mb-2">AI Assessment</h3>
           <p className="text-sm text-text-muted font-light">
-            Exclusive discount for founding members. One-time offer.
+            Get your free AI metabolic evaluation when we launch. Your custom protocol starts on day one.
           </p>
         </div>
         <div className="bg-navy border border-white/[0.06] rounded-2xl p-8 text-center">

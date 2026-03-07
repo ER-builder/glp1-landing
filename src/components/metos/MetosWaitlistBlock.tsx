@@ -24,10 +24,10 @@ export function MetosWaitlistBlock() {
         </div>
         <div className="relative overflow-hidden bg-gradient-to-b from-graphite/60 to-navy/40 border border-white/[0.06] rounded-[20px] p-8 text-center group">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          <div className="text-3xl mb-4">&#x1F4B0;</div>
-          <h3 className="text-lg font-semibold mb-2">Founder Pricing</h3>
+          <div className="text-3xl mb-4">&#x1F916;</div>
+          <h3 className="text-lg font-semibold mb-2">AI Diagnostic</h3>
           <p className="text-[15px] text-text-muted leading-relaxed">
-            Exclusive launch pricing for early adopters. Locked in permanently.
+            Get your free AI metabolic assessment. Your custom protocol starts before launch.
           </p>
         </div>
         <div className="relative overflow-hidden bg-gradient-to-b from-graphite/60 to-navy/40 border border-white/[0.06] rounded-[20px] p-8 text-center group">

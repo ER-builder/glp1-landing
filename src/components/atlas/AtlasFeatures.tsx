@@ -7,7 +7,7 @@ const features = [
   {
     icon: "\u26A1",
     title: "Energy Core",
-    desc: "B-vitamin + CoQ10 stack designed to support energy levels during GLP-1 therapy. No crash. No jitters.",
+    desc: "B-vitamin + CoQ10 stack designed to support energy levels during GLP-1 therapy. Formulated without stimulants.",
   },
   {
     icon: "\u{1F525}",
@@ -27,7 +27,7 @@ const features = [
   {
     icon: "\u{1F504}",
     title: "Recovery Protocol",
-    desc: "Adaptogen blend for cortisol management. Train harder. Recover faster.",
+    desc: "Adaptogen blend formulated to support the body's natural stress response and exercise recovery.",
   },
 ];
 
@@ -42,7 +42,7 @@ export function AtlasFeatures() {
           What&apos;s In The Stack
         </h2>
         <p className="text-[17px] text-text-muted mt-4 max-w-[560px] mx-auto font-light">
-          Six precision-dosed formulas engineered for men on GLP-1 therapy.
+          Six formulas, AI-matched to your phase and goals.
         </p>
       </div>
 

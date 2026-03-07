@@ -9,8 +9,8 @@ export function AtlasFooter() {
             Atlas<span className="text-sage">.</span>
           </h3>
           <p className="text-sm text-text-dim leading-relaxed max-w-[280px]">
-            The precision metabolic stack for men on GLP-1. Built to preserve.
-            Engineered to perform.
+            The precision metabolic stack for men on GLP-1. AI-personalized for
+            your GLP-1 journey.
           </p>
         </div>
 

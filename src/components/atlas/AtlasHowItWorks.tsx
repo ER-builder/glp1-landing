@@ -1,8 +1,8 @@
 const steps = [
-  { num: "1", title: "Assess", desc: "Take the metabolic quiz" },
-  { num: "2", title: "Match", desc: "Get your custom stack" },
+  { num: "1", title: "Assess", desc: "AI evaluates your profile and GLP-1 phase" },
+  { num: "2", title: "Match", desc: "AI builds your personalized protocol" },
   { num: "3", title: "Stack", desc: "Daily protocol, no guesswork" },
-  { num: "4", title: "Recomp", desc: "Track and optimize results" },
+  { num: "4", title: "Recomp", desc: "AI adapts as you progress" },
 ];
 
 export function AtlasHowItWorks() {

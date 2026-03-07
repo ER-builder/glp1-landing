@@ -3,25 +3,25 @@ const steps = [
     num: "1",
     label: "Diagnostic",
     title: "Assess",
-    desc: "Full metabolic assessment. We map your deficiencies, goals, and current GLP-1 protocol.",
+    desc: "Full metabolic assessment. AI evaluates your goals, lifestyle, and current GLP-1 phase to build your custom protocol.",
   },
   {
     num: "2",
     label: "Configure",
     title: "Match",
-    desc: "Match your protocol to the right module configuration. Personalized to your phase and biology.",
+    desc: "Match your protocol to the right module configuration. AI-matched to your goals and GLP-1 phase.",
   },
   {
     num: "3",
     label: "Deploy",
     title: "Execute",
-    desc: "Daily stack delivered. Zero guesswork. Every dose timed and dosed for maximum effect.",
+    desc: "Daily stack delivered. Zero guesswork. Every dose timed and dosed for your daily routine.",
   },
   {
     num: "4",
     label: "Recomp",
     title: "Optimize",
-    desc: "Track, measure, and refine. Continuous optimization based on your real-world data.",
+    desc: "Track, measure, and refine. AI adapts your protocol as you progress.",
   },
 ];
 

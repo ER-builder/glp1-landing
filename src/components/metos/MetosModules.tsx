@@ -11,23 +11,23 @@ const modules = [
   },
   {
     module: "module::metabolic_primer",
-    title: "Rate Lock",
-    desc: "Thermogenic calibration. Formulated to support healthy metabolic rate during weight loss.",
+    title: "Metabolic Support",
+    desc: "Nutrient support for metabolism. Formulated to support healthy metabolic rate during weight loss.",
   },
   {
     module: "module::gut_restore",
-    title: "Biome Repair",
+    title: "Biome Support",
     desc: "Microbiome support protocol. Formulated to support digestive health during GLP-1 therapy.",
   },
   {
     module: "module::electrolyte_matrix",
     title: "Mineral Balance",
-    desc: "Precision mineral replacement. Na/K/Mg in ratios designed to support mineral balance.",
+    desc: "Precision mineral support. Na/K/Mg in ratios designed to support mineral balance.",
   },
   {
     module: "module::recovery_ops",
-    title: "Cortisol Control",
-    desc: "Adaptogen stack for cortisol. Train harder without burning out.",
+    title: "Recovery Support",
+    desc: "Adaptogen blend formulated to support the body's natural stress response.",
   },
 ];
 
@@ -42,8 +42,8 @@ export function MetosModules() {
           System Modules
         </h2>
         <p className="text-lg text-text-muted mt-4 max-w-[560px] mx-auto font-light">
-          Six precision-engineered modules. Each one targets a specific failure
-          point in the GLP-1 protocol.
+          Six precision-engineered modules. Each one is designed to support a
+          specific aspect of your wellness during GLP-1 therapy.
         </p>
       </div>
 

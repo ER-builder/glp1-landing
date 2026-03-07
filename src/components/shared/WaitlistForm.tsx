@@ -19,8 +19,6 @@ export function WaitlistForm({
   const [message, setMessage] = useState("");
   const { trackCTA, getUTMParams } = useAnalytics();
 
-  const accentColor = variant === "a" ? "sage" : "teal";
-
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email || status === "loading") return;
@@ -60,20 +58,24 @@ export function WaitlistForm({
   }
 
   if (status === "success") {
+    const successClasses = variant === "a"
+      ? "bg-sage/10 border-sage/25 text-sage"
+      : "bg-teal/10 border-teal/25 text-teal";
+
     return (
       <div className={`text-center ${className}`}>
-        <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-${accentColor}/10 border border-${accentColor}/25`}>
-          <svg className={`w-5 h-5 text-${accentColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl ${successClasses}`}>
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
-          <span className={`text-${accentColor} font-medium`}>{message}</span>
+          <span className="font-medium">{message}</span>
         </div>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`flex flex-col sm:flex-row gap-3 max-w-md mx-auto ${className}`}>
+    <form onSubmit={handleSubmit} className={`relative flex flex-col sm:flex-row gap-3 max-w-md mx-auto ${className}`}>
       <input
         type="email"
         value={email}
@@ -83,6 +85,7 @@ export function WaitlistForm({
         }}
         placeholder="Enter your email"
         required
+        aria-label="Email address"
         className="flex-1 px-4 py-3 sm:py-4 rounded-xl bg-navy border border-white/10 text-text placeholder:text-text-dim focus:outline-none focus:border-white/25 text-[15px]"
       />
       <button

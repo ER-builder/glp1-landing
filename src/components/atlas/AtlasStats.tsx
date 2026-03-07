@@ -1,7 +1,7 @@
 export function AtlasStats() {
   const stats = [
     { value: "6", label: "Targeted Formulas" },
-    { value: "100%", label: "Science-Backed" },
+    { value: "AI", label: "Personalized" },
     { value: "GLP-1", label: "Designed For" },
     { value: "Men", label: "Built For" },
   ];

@@ -15,14 +15,19 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GLP-1 Metabolic Stack for Men",
+  metadataBase: new URL("https://stack.erapps.xyz"),
+  title: "AI-Personalized GLP-1 Stack for Men",
   description:
-    "Precision supplement protocol for men on GLP-1. Preserve muscle, restore energy, optimize your journey.",
+    "AI-personalized supplement protocol designed to support muscle preservation, energy, and wellness during GLP-1 therapy.",
   openGraph: {
-    title: "GLP-1 Metabolic Stack for Men",
+    title: "AI-Personalized GLP-1 Stack for Men",
     description:
-      "Precision supplement protocol for men on GLP-1. Preserve muscle, restore energy, optimize your journey.",
+      "AI-personalized supplement protocol designed to support muscle preservation, energy, and wellness during GLP-1 therapy.",
     type: "website",
+    images: ["/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

@@ -12,7 +12,7 @@ export function MetosHero() {
       <div className="relative">
         <div className="inline-flex items-center gap-2 bg-teal/10 border border-teal/25 text-teal font-mono text-xs font-medium tracking-[2px] uppercase px-5 py-2.5 rounded-full mb-9">
           <span className="w-1.5 h-1.5 rounded-full bg-teal shadow-[0_0_8px_theme(colors.teal)] animate-[pulse-dot_2s_ease-in-out_infinite]" />
-          Metabolic Operating System
+          AI-Powered Metabolic OS
         </div>
 
         <h1 className="text-[42px] md:text-[76px] font-extrabold tracking-[-2px] md:tracking-[-3.5px] leading-[1.05] max-w-[900px] mx-auto">
@@ -24,8 +24,8 @@ export function MetosHero() {
         </h1>
 
         <p className="text-[17px] md:text-xl text-text-muted mt-7 max-w-[640px] mx-auto font-light leading-relaxed">
-          Your GLP-1 handles the signal. metOS handles everything else — muscle,
-          energy, gut, nutrients. The complete metabolic stack for men.
+          Your GLP-1 handles the signal. metOS is designed to support the rest —
+          muscle preservation, energy, digestive comfort, and nutrient balance.
         </p>
 
         <div className="mt-11">

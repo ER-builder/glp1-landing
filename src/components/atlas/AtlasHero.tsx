@@ -10,7 +10,7 @@ export function AtlasHero() {
 
       <div className="relative">
         <div className="inline-block bg-sage/10 border border-sage/25 text-sage font-mono text-[11px] font-medium tracking-[2px] uppercase px-5 py-2 rounded-full mb-9">
-          GLP-1 Metabolic Stack for Men
+          AI-Personalized GLP-1 Stack for Men
         </div>
 
         <h1 className="text-[44px] md:text-[76px] font-extrabold tracking-[-2px] md:tracking-[-3.5px] leading-[1.05] max-w-[800px] mx-auto">
@@ -22,8 +22,8 @@ export function AtlasHero() {
         </h1>
 
         <p className="text-base md:text-[19px] text-text-muted mt-7 max-w-[580px] mx-auto font-light leading-relaxed">
-          A precision-built supplement protocol for men on GLP-1. Preserve muscle.
-          Restore energy. Support your GLP-1 journey.
+          A precision-built supplement protocol for men on GLP-1. Formulated to
+          support muscle preservation, energy, and your GLP-1 journey.
         </p>
 
         <div className="mt-11">
