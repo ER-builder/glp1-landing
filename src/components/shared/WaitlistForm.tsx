@@ -74,36 +74,43 @@ export function WaitlistForm({
     );
   }
 
+  const glowClass = variant === "a" ? "btn-glow-sage" : "btn-glow-teal";
+
   return (
-    <form onSubmit={handleSubmit} className={`relative flex flex-col sm:flex-row gap-3 max-w-md mx-auto ${className}`}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => {
-          setEmail(e.target.value);
-          if (status === "error") setStatus("idle");
-        }}
-        placeholder="Enter your email"
-        required
-        aria-label="Email address"
-        className="flex-1 px-4 py-3 sm:py-4 rounded-xl bg-navy border border-white/10 text-text placeholder:text-text-dim focus:outline-none focus:border-white/25 text-[15px]"
-      />
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className={`px-6 py-3 sm:py-4 rounded-xl font-semibold text-[15px] transition-all duration-200 whitespace-nowrap
-          ${variant === "a"
-            ? "bg-sage text-abyss hover:bg-sage-hover"
-            : "bg-teal text-abyss hover:bg-teal-hover"
-          }
-          ${status === "loading" ? "opacity-70 cursor-wait" : "hover:-translate-y-0.5"}
-        `}
-      >
-        {status === "loading" ? "Joining..." : buttonLabel}
-      </button>
-      {status === "error" && (
-        <p className="text-red-400 text-sm mt-1 sm:absolute sm:bottom-0 sm:translate-y-full">{message}</p>
-      )}
-    </form>
+    <div className={className}>
+      <form onSubmit={handleSubmit} className="relative flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (status === "error") setStatus("idle");
+          }}
+          placeholder="Enter your email"
+          required
+          aria-label="Email address"
+          className="flex-1 px-4 py-3 sm:py-4 rounded-xl bg-navy border border-white/10 text-text placeholder:text-text-dim focus:outline-none focus:border-white/25 text-[15px]"
+        />
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className={`px-6 py-3 sm:py-4 rounded-xl font-semibold text-[15px] transition-all duration-200 whitespace-nowrap
+            ${variant === "a"
+              ? `bg-sage text-abyss hover:bg-sage-hover ${glowClass}`
+              : `bg-teal text-abyss hover:bg-teal-hover ${glowClass}`
+            }
+            ${status === "loading" ? "opacity-70 cursor-wait" : "hover:-translate-y-0.5"}
+          `}
+        >
+          {status === "loading" ? "Joining..." : buttonLabel}
+        </button>
+        {status === "error" && (
+          <p className="text-red-400 text-sm mt-1 sm:absolute sm:bottom-0 sm:translate-y-full">{message}</p>
+        )}
+      </form>
+      <p className="text-center text-xs text-text-dim mt-4">
+        Free to join &middot; No spam &middot; Unsubscribe anytime
+      </p>
+    </div>
   );
 }

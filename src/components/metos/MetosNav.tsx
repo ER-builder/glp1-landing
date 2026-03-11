@@ -23,7 +23,7 @@ export function MetosNav() {
               trackCTA("nav_boot_system");
               document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-teal text-abyss px-[22px] py-2.5 rounded-lg text-sm font-semibold hover:bg-teal-hover hover:-translate-y-px transition-all"
+            className="bg-teal text-abyss px-[22px] py-2.5 rounded-lg text-sm font-semibold hover:bg-teal-hover hover:-translate-y-px transition-all btn-glow-teal"
           >
             Boot Your System
           </button>

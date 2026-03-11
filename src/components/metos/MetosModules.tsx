@@ -33,8 +33,8 @@ const modules = [
 
 export function MetosModules() {
   return (
-    <section id="modules" className="py-24 md:py-[120px] px-6 md:px-10 max-w-[1200px] mx-auto">
-      <div className="text-center mb-[72px]">
+    <section id="modules" className="py-24 lg:py-32 px-6 md:px-10 max-w-[1200px] mx-auto">
+      <div className="text-center mb-16 lg:mb-20">
         <div className="font-mono text-xs font-medium tracking-[3px] uppercase text-teal mb-4">
           System Architecture
         </div>
@@ -51,7 +51,7 @@ export function MetosModules() {
         {modules.map((m) => (
           <div
             key={m.module}
-            className="relative overflow-hidden bg-gradient-to-b from-graphite/60 to-navy/40 border border-white/[0.06] rounded-[20px] p-8 md:p-9 transition-all duration-[350ms] hover:border-teal/20 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] group"
+            className="relative overflow-hidden bg-gradient-to-b from-graphite/60 to-navy/40 backdrop-blur-sm border border-white/[0.08] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] rounded-[20px] p-8 md:p-9 transition-all duration-[350ms] hover:border-teal/20 hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] group"
           >
             {/* Top highlight line */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[350ms]" />

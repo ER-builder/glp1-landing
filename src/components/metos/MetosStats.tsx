@@ -7,7 +7,9 @@ export function MetosStats() {
   ];
 
   return (
-    <section className="bg-navy border-y border-teal/[0.08] py-12 px-6 md:px-10">
+    <section className="bg-navy py-14 px-6 md:px-10 relative">
+      <div className="absolute top-0 left-0 right-0 section-divider-teal" />
+      <div className="absolute bottom-0 left-0 right-0 section-divider-teal" />
       <div className="max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
         {stats.map((stat, i) => (
           <div key={stat.desc} className="relative">

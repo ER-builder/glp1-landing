@@ -4,19 +4,26 @@ import { WaitlistForm } from "@/components/shared/WaitlistForm";
 
 export function MetosHero() {
   return (
-    <section className="pt-[180px] pb-20 md:pb-[120px] px-6 md:px-10 text-center relative overflow-hidden">
-      {/* Background glows */}
-      <div className="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] bg-[radial-gradient(ellipse_at_center,rgba(45,212,191,0.06)_0%,rgba(74,222,128,0.03)_30%,transparent_60%)] pointer-events-none" />
-      <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(45,212,191,0.04)_0%,transparent_70%)] pointer-events-none" />
+    <section className="pt-[180px] pb-24 md:pb-[120px] px-6 md:px-10 text-center relative overflow-hidden">
+      {/* Dot grid texture */}
+      <div className="absolute inset-0 dot-grid pointer-events-none" />
 
-      <div className="relative">
+      {/* Primary background glow — stronger */}
+      <div className="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] bg-[radial-gradient(ellipse_at_center,rgba(45,212,191,0.15)_0%,rgba(74,222,128,0.06)_30%,transparent_60%)] pointer-events-none" />
+
+      {/* Animated pulse glow */}
+      <div className="absolute top-[60px] left-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(45,212,191,0.10)_0%,transparent_70%)] pointer-events-none hero-pulse" />
+
+      <div className="relative max-w-7xl mx-auto">
         <div className="inline-flex items-center gap-2 bg-teal/10 border border-teal/25 text-teal font-mono text-xs font-medium tracking-[2px] uppercase px-5 py-2.5 rounded-full mb-9">
           <span className="w-1.5 h-1.5 rounded-full bg-teal shadow-[0_0_8px_theme(colors.teal)] animate-[pulse-dot_2s_ease-in-out_infinite]" />
           AI-Powered Metabolic OS
         </div>
 
         <h1 className="text-[42px] md:text-[76px] font-extrabold tracking-[-2px] md:tracking-[-3.5px] leading-[1.05] max-w-[900px] mx-auto">
-          Your GLP-1 stack,
+          <span className="bg-gradient-to-r from-white via-white to-teal/80 bg-clip-text text-transparent">
+            Your GLP-1 stack,
+          </span>
           <br />
           <span className="bg-gradient-to-br from-teal to-sage bg-clip-text text-transparent">
             upgraded.

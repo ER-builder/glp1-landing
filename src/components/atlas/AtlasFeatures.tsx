@@ -33,8 +33,8 @@ const features = [
 
 export function AtlasFeatures() {
   return (
-    <section id="features" className="py-20 md:py-[100px] px-6 md:px-10 max-w-[1200px] mx-auto">
-      <div className="text-center mb-16">
+    <section id="features" className="py-24 lg:py-32 px-6 md:px-10 max-w-[1200px] mx-auto">
+      <div className="text-center mb-16 lg:mb-20">
         <div className="font-mono text-[11px] font-medium tracking-[3px] uppercase text-teal mb-4">
           The Protocol
         </div>
@@ -47,12 +47,16 @@ export function AtlasFeatures() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {features.map((f) => (
+        {features.map((f, i) => (
           <div
             key={f.title}
-            className="bg-navy border border-white/[0.06] rounded-2xl p-8 transition-all duration-300 hover:border-sage/30 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
+            className="glass-card rounded-2xl p-8 md:p-9 transition-all duration-300 hover:border-sage/30 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] relative group"
           >
-            <div className="w-[52px] h-[52px] rounded-xl bg-sage/10 border border-sage/20 flex items-center justify-center mb-5 text-[22px]">
+            {/* Faded step number */}
+            <div className="absolute top-5 right-6 text-[48px] font-bold text-white/[0.03] leading-none select-none">
+              {i + 1}
+            </div>
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-sage/15 to-teal/10 border border-sage/20 flex items-center justify-center mb-5 text-[24px]">
               {f.icon}
             </div>
             <h3 className="text-lg font-semibold mb-2.5">{f.title}</h3>

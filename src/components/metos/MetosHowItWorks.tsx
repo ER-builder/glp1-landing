@@ -27,12 +27,15 @@ const steps = [
 
 export function MetosHowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 md:py-[120px] px-6 md:px-10 bg-navy relative">
-      {/* Top highlight */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal/15 to-transparent" />
+    <section id="how-it-works" className="py-24 lg:py-32 px-6 md:px-10 bg-navy relative">
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal/[0.02] to-transparent pointer-events-none" />
 
-      <div className="max-w-[1100px] mx-auto">
-        <div className="text-center mb-[72px]">
+      {/* Top highlight */}
+      <div className="absolute top-0 left-0 right-0 section-divider-teal" />
+
+      <div className="max-w-[1100px] mx-auto relative">
+        <div className="text-center mb-16 lg:mb-20">
           <div className="font-mono text-xs font-medium tracking-[3px] uppercase text-teal mb-4">
             Boot Sequence
           </div>
@@ -45,13 +48,18 @@ export function MetosHowItWorks() {
         </div>
 
         <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
-          {/* Connecting line */}
-          <div className="hidden md:block absolute top-9 left-[60px] right-[60px] h-px bg-gradient-to-r from-teal to-sage opacity-15" />
+          {/* Connecting line — visible gradient */}
+          <div className="hidden md:block absolute top-10 left-[60px] right-[60px] h-px bg-gradient-to-r from-teal/40 via-sage/30 to-teal/40" />
 
           {steps.map((step) => (
             <div key={step.num} className="text-center relative">
-              <div className="relative z-[2] w-[72px] h-[72px] rounded-full bg-teal/10 border border-teal/20 flex items-center justify-center mx-auto mb-6 font-mono text-2xl font-semibold text-teal">
-                {step.num}
+              <div className="relative z-[2] w-20 h-20 rounded-full bg-teal/10 border border-teal/20 flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(45,212,191,0.08)]">
+                <span className="font-mono text-[11px] text-teal/50 absolute -top-0.5 -right-0.5">
+                  0{step.num}
+                </span>
+                <span className="font-mono text-2xl font-semibold text-teal">
+                  {step.num}
+                </span>
               </div>
               <div className="font-mono text-xs font-medium text-teal tracking-[2px] uppercase mb-2">
                 {step.label}

@@ -2,7 +2,8 @@ import { FDADisclaimer } from "@/components/shared/FDADisclaimer";
 
 export function MetosFooter() {
   return (
-    <footer className="bg-abyss border-t border-white/[0.06] pt-[72px] pb-10 px-6 md:px-10">
+    <footer className="bg-abyss pt-[72px] pb-10 px-6 md:px-10 relative">
+      <div className="absolute top-0 left-0 right-0 section-divider-teal" />
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12">
         <div>
           <h3 className="text-[26px] font-bold tracking-tight mb-4">

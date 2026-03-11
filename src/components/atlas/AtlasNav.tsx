@@ -23,7 +23,7 @@ export function AtlasNav() {
               trackCTA("nav_get_early_access");
               document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-sage text-abyss px-[22px] py-2.5 rounded-lg text-sm font-semibold hover:bg-sage-hover hover:-translate-y-px transition-all"
+            className="bg-sage text-abyss px-[22px] py-2.5 rounded-lg text-sm font-semibold hover:bg-sage-hover hover:-translate-y-px transition-all btn-glow-sage"
           >
             Get Early Access
           </button>
